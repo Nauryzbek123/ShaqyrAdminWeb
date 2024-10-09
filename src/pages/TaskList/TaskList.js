@@ -11,7 +11,7 @@ const TaskList = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/tasks');
+        const response = await axios.get('http://91.243.71.220:3000/tasks');
         console.log('Tasks Response:', response.data);
         setTasks(response.data);
       } catch (error) {
@@ -24,7 +24,7 @@ const TaskList = () => {
 
   const deleteTask = async (taskId) => {
     try {
-      await axios.delete(`http://localhost:3000/tasks/${taskId}`);
+      await axios.delete(`http://91.243.71.220:3000/tasks/${taskId}`);
       setTasks(tasks.filter(task => task._id !== taskId)); 
       message.success('Задача успешно удалена!'); 
     } catch (error) {
@@ -64,7 +64,7 @@ const TaskList = () => {
     setSelectedTask(null);
   };
 
-  const baseUrl = 'http://localhost:3000/'; // Adjust this base URL according to your server setup
+  const baseUrl = 'http://91.243.71.220:3000/'; // Adjust this base URL according to your server setup
 
   return (
     <>

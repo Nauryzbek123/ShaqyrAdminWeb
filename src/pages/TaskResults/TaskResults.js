@@ -12,7 +12,7 @@ const TaskResults = () => {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/tasks/${taskId}/results`);
+        const response = await axios.get(`http://91.243.71.220:3000/tasks/${taskId}/results`);
         setResults(response.data);
       } catch (err) {
         setError('There was an error fetching the results!');

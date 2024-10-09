@@ -28,7 +28,7 @@ const AddTask = () => {
     });
 
     try {
-      const response = await axios.post('http://localhost:3000/tasks', formData, {
+      const response = await axios.post('http://91.243.71.220:3000/tasks', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
